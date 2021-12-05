@@ -2,7 +2,7 @@ package bapi
 
 import (
 	"encoding/json"
-	binance_struct "github.com/1makarov/binance-nft-buy/internal/domain/binance-api"
+	binance_struct "github.com/max030501/NftBot/internal/domain/binance-api"
 	"github.com/valyala/fasthttp"
 )
 

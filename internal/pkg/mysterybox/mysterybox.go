@@ -2,8 +2,8 @@ package mysterybox
 
 import (
 	"fmt"
-	"github.com/1makarov/binance-nft-buy/internal/domain/mysterybox"
-	bapi "github.com/1makarov/binance-nft-buy/pkg/binance-api"
+	"github.com/max030501/NftBot/internal/domain/mysterybox"
+	bapi "github.com/max030501/NftBot/pkg/binance-api"
 	"os"
 )
 

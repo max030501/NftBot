@@ -2,8 +2,7 @@ package bapi
 
 import (
 	"encoding/json"
-	"fmt"
-	binance_struct "github.com/1makarov/binance-nft-buy/internal/domain/binance-api"
+	binance_struct "github.com/max030501/NftBot/internal/domain/binance-api"
 	"github.com/valyala/fasthttp"
 )
 
@@ -11,16 +10,15 @@ const (
 	urlNFTMysteryBoxBuy = "https://www.binance.com/bapi/nft/v1/private/nft/mystery-box/purchase"
 )
 
-func (api *Api) NFTMysteryBoxGenerateRequest(body []byte,sitekey string,checkbot string,cookie string,trace string) *fasthttp.Request {
+func (api *Api) NFTMysteryBoxGenerateRequest(body []byte, sitekey string, checkbot string) *fasthttp.Request {
 	r := fasthttp.AcquireRequest()
 	api.request.CopyTo(r)
 	r.Header.SetMethod(fasthttp.MethodPost)
 	r.Header.SetContentType("application/json")
 	r.Header.SetRequestURI(urlNFTMysteryBoxBuy)
 	r.SetBody(body)
-	r.Header.Set("x-nft-checkbot-sitekey",sitekey)
-	r.Header.Set("x-nft-checkbot-token",checkbot)
-	fmt.Println("checktoken ",len(checkbot)," ",len(sitekey))
+	r.Header.Set("x-nft-checkbot-sitekey", sitekey)
+	r.Header.Set("x-nft-checkbot-token", checkbot)
 	return r
 }
 

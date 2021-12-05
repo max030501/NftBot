@@ -1,13 +1,13 @@
 package account
 
 import (
-	"github.com/1makarov/binance-nft-buy/internal/domain/account"
-	bapi "github.com/1makarov/binance-nft-buy/pkg/binance-api"
+	"github.com/max030501/NftBot/internal/domain/account"
+	bapi "github.com/max030501/NftBot/pkg/binance-api"
 )
 
 type Account struct {
-	Setting     account.Setting
-	Auth        *bapi.Api
+	Setting account.Setting
+	Auth    *bapi.Api
 }
 
 func InitAccount(setting account.Setting) (*Account, error) {

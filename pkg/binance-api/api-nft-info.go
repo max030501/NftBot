@@ -3,12 +3,11 @@ package bapi
 import (
 	"encoding/json"
 	"fmt"
-	binance_struct "github.com/1makarov/binance-nft-buy/internal/domain/binance-api"
-	"github.com/1makarov/binance-nft-buy/internal/domain/mysterybox"
+	binance_struct "github.com/max030501/NftBot/internal/domain/binance-api"
+	"github.com/max030501/NftBot/internal/domain/mysterybox"
 	"github.com/valyala/fasthttp"
 	"strconv"
 )
-
 
 const (
 	urlNFTMysteryBoxInfo = "https://www.binance.com/bapi/nft/v1/friendly/nft/mystery-box/detail?productId=%s"

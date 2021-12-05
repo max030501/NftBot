@@ -4,7 +4,6 @@ import (
 	"github.com/valyala/fasthttp"
 )
 
-
 func (api *Api) get(url string) (*fasthttp.Response, error) {
 	r := fasthttp.AcquireRequest()
 	api.request.CopyTo(r)
