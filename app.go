@@ -111,6 +111,16 @@ func initEnv() error {
 		chromedp.Navigate(`https://www.binance.com/ru/nft/home`),
 		chromedp.Sleep(time.Second),
 	)
+	if err != nil {
+		return err
+	}
+	if os.Getenv("port") == "" {
+		err = chromedp.Run(taskCtx,
+			network.Enable(),
+			chromedp.WaitVisible("//button[text()=\"Принять\"]"),
+			chromedp.Click("//button[text()=\"Принять\"]"),
+		)
+	}
 	if !auth {
 		err = chromedp.Run(taskCtx,
 			network.Enable(),
